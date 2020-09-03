@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="CargoProjects">
+    <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="713344ba-e5dc-4afd-bf09-f288a43112c2" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Rust File" />
+      </list>
+    </option>
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="rzlphf14" />
+  </component>
+  <component name="ProjectId" id="1gu2wO8ncR48WVw21bASaKiJgKp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
+    <property name="settings.editor.selected.configurable" value="language.rust.rustfmt" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\programming\rust\hack_vm\src" />
+      <recent name="D:\programming\rust\hack_vm\src\file_reader" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Cargo Command.Run hack_vm">
+    <configuration name="Expand hack_vm::code_emitter" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="expand --bin hack_vm --color=always --theme=GitHub --tests code_emitter" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Run hack_vm" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="run --package hack_vm --bin hack_vm" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="NO" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Cargo Command.Expand hack_vm::code_emitter" />
+      <item itemvalue="Cargo Command.Run hack_vm" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cargo Command.Run hack_vm" />
+        <item itemvalue="Cargo Command.Expand hack_vm::code_emitter" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="RustProjectSettings">
+    <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
+    <option name="version" value="2" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="WindowStateProjectService">
+    <state x="414" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598951833954">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="414" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/1920.-450.1200.1920@0.0.1920.1050" timestamp="1598951833954" />
+    <state x="707" y="319" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598957197926">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="707" y="319" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050/1920.-450.1200.1920@0.0.1920.1050" timestamp="1598957197926" />
+    <state x="640" y="260" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1599021203365">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="640" y="260" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1599021203365" />
+    <state width="1877" height="317" key="GridCell.Tab.0.bottom" timestamp="1599125468879">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="317" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.-450.1200.1920@0.0.1920.1050" timestamp="1599125468879" />
+    <state width="1877" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1599110271831" />
+    <state width="1877" height="317" key="GridCell.Tab.0.center" timestamp="1599125468879">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="317" key="GridCell.Tab.0.center/0.0.1920.1050/1920.-450.1200.1920@0.0.1920.1050" timestamp="1599125468879" />
+    <state width="1877" height="277" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1599110271831" />
+    <state width="1877" height="317" key="GridCell.Tab.0.left" timestamp="1599125468879">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="317" key="GridCell.Tab.0.left/0.0.1920.1050/1920.-450.1200.1920@0.0.1920.1050" timestamp="1599125468879" />
+    <state width="1877" height="277" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1599110271831" />
+    <state width="1877" height="317" key="GridCell.Tab.0.right" timestamp="1599125468879">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="317" key="GridCell.Tab.0.right/0.0.1920.1050/1920.-450.1200.1920@0.0.1920.1050" timestamp="1599125468879" />
+    <state width="1877" height="277" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1599110271831" />
+    <state x="2021" y="154" key="SettingsEditor" timestamp="1598954141334">
+      <screen x="1920" y="-450" width="1200" height="1920" />
+    </state>
+    <state x="2021" y="154" key="SettingsEditor/0.0.1920.1050/1920.-450.1200.1920@0.0.1920.1050" timestamp="1598954141334" />
+    <state x="1141" y="315" width="1216" height="862" key="dock-window-1" timestamp="1599119064369">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1141" y="315" width="1216" height="862" key="dock-window-1/0.0.1920.1050/1920.-450.1200.1920@0.0.1920.1050" timestamp="1599119064369" />
+    <state x="494" y="93" width="1216" height="786" key="dock-window-1/0.0.1920.1050@0.0.1920.1050" timestamp="1598982456325" />
+    <state x="1962" y="-465" width="1216" height="1037" maximized="true" key="dock-window-2" timestamp="1599120699858">
+      <screen x="1920" y="-450" width="1200" height="1920" />
+    </state>
+    <state x="1962" y="-465" width="1216" height="1037" maximized="true" key="dock-window-2/0.0.1920.1050/1920.-450.1200.1920@0.0.1920.1050" timestamp="1599120699858" />
+    <state width="350" height="94" key="javadoc.popup.new" timestamp="1599125359955">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="350" height="94" key="javadoc.popup.new/0.0.1920.1050/1920.-450.1200.1920@0.0.1920.1050" timestamp="1599125359955" />
+    <state width="511" height="157" key="javadoc.popup.new/0.0.1920.1050@0.0.1920.1050" timestamp="1599108577409" />
+    <state x="2183" y="-5" width="672" height="678" key="search.everywhere.popup" timestamp="1599117954199">
+      <screen x="1920" y="-450" width="1200" height="1920" />
+    </state>
+    <state x="2183" y="-5" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.-450.1200.1920@0.0.1920.1050" timestamp="1599117954199" />
+    <state x="421" y="243" width="1076" height="371" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1599108245231" />
+  </component>
+</project>

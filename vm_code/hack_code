@@ -1,0 +1,134 @@
+// Push op_type num
+    // D = mem[ op_type + num ]
+    @{ op_type }
+    D=A
+    @{ num }
+    A=D+A
+    D=M
+
+    // *SP = D
+    @SP
+    A=M
+    M=D
+
+    // SP++
+    @SP
+    M=M+1
+
+
+// Pop op_type num
+
+    // SP--
+    @SP
+    M=M-1
+
+    // D = *SP
+    @SP
+    A=M
+    D=M
+
+    @VALUE
+    M=D
+
+    // mem[ op_type + num ] = D
+    @{ op_type }
+    A=M
+    D=A
+    @{ num }
+    A=D+A
+
+    M=TMP
+
+    D=D+A // address
+    @ADDRESS
+    M=D  // address backup
+
+    @VALUE
+    D=M // value
+
+    @ADDRESS
+    M=D
+
+
+
+// Add
+
+    POP_D
+    @TMP
+    M=D
+
+    POP_D
+
+    @TMP
+    D=M+D
+
+    PUSH_D
+
+// SUB
+    POP_D
+    @TMP
+    M=D
+
+    POP_D
+
+    @TMP
+    D=M-D
+
+    PUSH_D
+
+
+// EQ, GT, LT
+    A == B
+
+    POP_D
+    @TMP
+    M=D
+
+    POP_D
+
+    @TMP
+    D=M-D
+
+    @NOT_EQUAL_n
+
+    D; JNE
+    D=0
+
+    @AFTER_EQUAL_n
+    0; JMP
+
+    (NOT_EQUAL_n)
+    D=-1
+
+    (AFTER_EQUAL_n)
+    PUSH_D
+
+
+// AND
+    POP_D
+    @TMP
+    M=D
+    POP_D
+    @TMP
+    D=M&D
+    PUSH_D
+
+// OR
+    POP_D
+    @TMP
+    M=D
+    POP_D
+    @TMP
+    D=M|D
+    PUSH_D
+
+// NOT
+    POP_D
+    D=!D
+    PUSH_D
+
+// Neg
+    POP_D
+    D=!D
+    D=D+1
+    PUSH_D
