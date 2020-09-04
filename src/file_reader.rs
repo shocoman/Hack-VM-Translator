@@ -1,10 +1,9 @@
 use std::fs::File;
 use std::io::{BufRead, BufReader};
-use std::path::{Path};
+use std::path::Path;
 
 pub struct FileReader {
-    pub buffers: Vec<BufReader<File>>,
-    pub file_names: Vec<String>,
+    pub buffers: Vec<(BufReader<File>, String)>,
 }
 
 impl FileReader {
@@ -12,29 +11,13 @@ impl FileReader {
         let is_dir = std::fs::metadata(path).unwrap().is_dir();
 
         return if is_dir {
-            let file_names = Self::get_file_paths_that_ends_with(path, "vm");
+            let file_names = Self::get_file_paths_that_end_with(path, "vm");
 
-            let mut names = vec![];
-            let buf_readers = file_names
-                .iter()
-                .map(|path| {
-                    let file = std::fs::File::open(path).unwrap();
-                    let name: String = Path::new(path)
-                        .file_name()
-                        .unwrap()
-                        .to_str()
-                        .unwrap()
-                        .to_string();
+            let readers = FileReader::get_readers_with_names(file_names);
 
-                    names.push(name);
-
-                    BufReader::new(file)
-                })
-                .collect::<Vec<_>>();
 
             FileReader {
-                buffers: buf_readers,
-                file_names: names,
+                buffers: readers
             }
         } else {
             let name: String = Path::new(path)
@@ -48,13 +31,25 @@ impl FileReader {
             let reader = std::io::BufReader::new(f);
 
             FileReader {
-                buffers: vec![reader],
-                file_names: vec![name],
+                buffers: vec![(reader, name)]
             }
-        }
+        };
     }
 
-    fn get_file_paths_that_ends_with(path: &str, suffix: &str) -> Vec<String> {
+    fn get_readers_with_names(file_names: Vec<String>) -> Vec<(BufReader<File>, String)> {
+        file_names.iter()
+            .filter_map(|path| {
+                let file = std::fs::File::open(path).unwrap();
+                let name: String = Path::new(path).file_name()?.to_str()?.to_string();
+
+                // names.push(name);
+
+                Some((BufReader::new(file), name))
+            })
+            .collect::<Vec<_>>()
+    }
+
+    fn get_file_paths_that_end_with(path: &str, suffix: &str) -> Vec<String> {
         std::fs::read_dir(path)
             .unwrap()
             .filter_map(|mb_entry| mb_entry.ok().and_then(|entry| Some(entry.path())))
@@ -79,11 +74,11 @@ impl FileReader {
         let mut current_name = String::new();
 
         let len = self.buffers.len();
-        for (i, buf_reader) in self.buffers.iter_mut().enumerate() {
+        for (i, (buf_reader, file_name)) in self.buffers.iter_mut().enumerate() {
             buf_reader.read_line(&mut line).unwrap();
 
             if !line.is_empty() || i == len - 1 {
-                current_name = self.file_names[i]
+                current_name = file_name
                     .clone()
                     .strip_suffix(".vm")
                     .unwrap()

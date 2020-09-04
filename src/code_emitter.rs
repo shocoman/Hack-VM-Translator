@@ -1,7 +1,7 @@
 use crate::parser::{Expression, StackOpType};
 use std::string::String;
 
-const TEMP_ADDRESS_NAME: &str = "R13"; // Or mb R13-R15 - general purpose register?
+const TEMP_ADDRESS_NAME: &str = "R13";
 const TEMP_ADDRESS_NAME2: &str = "R14";
 
 const PUSH_D: &str = "\n// PUSH D\n \
@@ -132,11 +132,7 @@ pub fn emit_bootstrap_code() -> String {
     )
 }
 
-fn emit_write_value_into_d(
-    mut address: StackOpType,
-    mut offset: String,
-    file_name: String,
-) -> String {
+fn emit_write_into_d(mut address: StackOpType, mut offset: String, file_name: String) -> String {
     let address_pointer = match address {
         StackOpType::Temp | StackOpType::Pointer | StackOpType::Static => "",
         _ => "A=M\n",
@@ -181,11 +177,7 @@ fn emit_write_value_into_d(
     }
 }
 
-fn emit_write_d_in_memory(
-    mut address: StackOpType,
-    mut offset: String,
-    file_name: String,
-) -> String {
+fn emit_write_d_into(mut address: StackOpType, mut offset: String, file_name: String) -> String {
     let address_pointer = match address {
         StackOpType::Temp | StackOpType::Pointer | StackOpType::Static => "",
         _ => "A=M\n",
@@ -314,13 +306,15 @@ pub fn emit_code(e: Expression, counter: i32, file_name: String) -> String {
         Expression::None => unreachable!(),
         Expression::Push(op_type, num) => format!(
             "\n{0}\n{1}",
-            emit_write_value_into_d(op_type, num, file_name),
+            emit_write_into_d(op_type, num, file_name),
             PUSH_D
         ),
         Expression::Pop(op_type, num) => {
-            format!("\n{0}", emit_write_d_in_memory(op_type, num, file_name))
+            format!("\n{0}", emit_write_d_into(op_type, num, file_name))
         }
-        Expression::Eq | Expression::Gt | Expression::Lt => format!("\n{0}", emit_compare(e, counter)),
+        Expression::Eq | Expression::Gt | Expression::Lt => {
+            format!("\n{0}", emit_compare(e, counter))
+        }
         Expression::Add | Expression::Sub | Expression::And | Expression::Or => {
             format!("\n{0}", emit_binary_operation(e))
         }
