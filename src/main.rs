@@ -5,8 +5,8 @@ mod file_reader;
 use crate::code_emitter::emit_bootstrap_code;
 use parser::Expression;
 use std::fs::File;
-use std::io::{BufRead, BufReader, Read, Write, Chain};
 use file_reader::FileReader;
+use std::io::Write;
 
 fn run_compilation() {
 
